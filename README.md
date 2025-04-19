@@ -1,8 +1,16 @@
-# Art-Generation-w-Neural-Style-Transfer
-This is a personal project from DeepLearning.AI's [Deep Learning Specialization](https://www.deeplearning.ai/courses/deep-learning-specialization/) Course#4: Convolutional Neural Networks
+# Neural Style Transfer Art 🎨
 
-Neural style transfer (NST) is a cool AI technique that lets you combine the look of two images into one. Imagine taking a photo and making it look like a famous painting! It employs two Ingredients:
-- Content Image (C): This is the picture you want to keep the basic structure of. Think of it as the sketch or outline.
-- Style Image (S): This is the image that provides the artistic flair. It could be a painting, a drawing, or even another photograph with a unique style.
+This project implements **Neural Style Transfer (NST)** — a fascinating technique that combines the **content of one image** with the **style of another**, producing a new image that looks like a painting of the original photo. This project is inspired by DeepLearning.AI's Deep Learning Specialization (Course 4: Convolutional Neural Networks), showcasing the creative power of convolutional layers beyond classification tasks.
 
-The model combines these two images to form a third generated (G) image, which is a fine blend of the content and style images.
+## 🖼️ What Is Neural Style Transfer?
+
+NST works by blending:
+
+- **Content Image (C)**: The image whose layout and structure you want to preserve.
+- **Style Image (S)**: The image whose visual style (colors, brush strokes, textures) you want to apply.
+- **Generated Image (G)**: The output that merges the content from **C** and style from **S**.
+
+This is achieved by optimizing a loss function that combines:
+- **Content Loss**: How different G is from C.
+- **Style Loss**: How different G is from S.
+- **Total Loss** = α * Content Loss + β * Style Loss
